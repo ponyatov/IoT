@@ -1,0 +1,67 @@
+{
+    // multi
+    "multiCommand.commands": [
+        { "command": "multiCommand.f11",
+            "sequence": [
+                "workbench.action.files.saveAll",
+                { "command": "workbench.action.terminal.sendSequence",
+                    "args": {"text": "\u000D clear ; LANG=C make format \u000D"}}]
+        },
+        { "command": "multiCommand.f12",
+            "sequence": [
+                "workbench.action.files.saveAll",
+                { "command": "workbench.action.terminal.sendSequence",
+                    "args": {"text": "\u000D clear ; LANG=C make tmp/cad.wat \u000D"}}]
+        },
+    ],
+
+    "files.exclude": {
+        // "doc/mdoc/*": true,
+        "**/.ipynb*/**":true,
+    },
+    "files.associations": {
+        "**/.cargo/config": "toml",
+    },
+
+    // editor
+    "editor.tabSize": 4,
+    "editor.rulers": [80],
+    "workbench.tree.indent": 24,
+    "explorer.autoReveal": false,
+    "files.insertFinalNewline": true,
+    "git.enabled": false,
+    "git.autofetch": false,
+    "git.ignoreLimitWarning": true,
+
+    // Rust
+    "testExplorer.addToEditorContextMenu": true,
+    "testExplorer.showOnRun": true,
+	"rust-analyzer.checkOnSave": false,
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true
+    },
+    // "rust-analyzer.checkOnSave.command": "check",
+    "rust-analyzer.checkOnSave.extraArgs": [
+        "--workspace",
+        "--exclude", "wasm",
+        "--exclude", "cortex",
+        "--exclude", "droid",
+        "--exclude", "wam",
+    ],
+    "rust-analyzer.checkOnSave.invocationStrategy": "once",
+
+    // Web
+    "simpleBrowser.focusLockIndicator.enabled": true,
+    // "livePreview.openPreviewTarget": "http://127.0.0.1:12345",
+    "livePreview.defaultPreviewPath": "static/index.html",
+
+    // clang-format
+    "clang-format.executable":     "${userHome}/clang-format",
+    "clang-format.fallbackStyle":  "Google",
+    "clang-format.style":          "file",
+    "[javascript]": {
+        "editor.defaultFormatter": "xaver.clang-format",
+        "editor.formatOnSave":     true,
+    }
+}

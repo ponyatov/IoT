@@ -1,0 +1,32 @@
+{
+    "name": "IoT/SCADA",
+    "short_name": "IoT",
+    "description": "Web interface for Rust/IoT infrastructure",
+    "icons": [
+        {
+            "src": "/logo_48.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "/logo_72.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "/logo_128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "/logo_192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ],
+    "id": "/IoT",
+    "start_url": "/",
+    "background_color": "#222",
+    "theme_color": "#111",
+    "display": "standalone"
+}

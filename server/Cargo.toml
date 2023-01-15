@@ -1,0 +1,18 @@
+[package]
+name        = "server"
+version     = "0.0.1"
+edition     = "2021"
+
+authors     = ["Dmitry Ponyatov <dponyatov@gmail.com>"]
+description = "IoT message/backend server"
+
+[dependencies]
+regex = "*"
+lazy_static = "*"
+# local
+common = { path = "../common" }
+config = { path = "../config" }
+vm     = { path = "../vm"     }
+
+# const_format = "*"
+mime = "*"

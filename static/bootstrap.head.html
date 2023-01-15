@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>IoT/SCADA</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1">
+    <link rel="stylesheet" href="/darkly.min.css"/>
+    <script src="/jquery.min.js"></script>
+    <script src="/popper.min.js"></script>
+    <script src="/bootstrap.min.js"></script>
+</head>
+
+<style>
+    /* .navbar-brand { color: yellowgreen; } */
+    #logo { max-width: 48px; }
+    #ws {
+            /* width: 320px; height: 240px; */
+            border: 1px solid darkgreen; }
+    #buttons {
+            border: 1px solid darkblue; }
+
+    footer { position: absolute; bottom: 0; width: 100%; }
+    #httpreq { background: #111; }
+    /* #status { width: 100%; } */
+</style>
+
+<body class="container-fluid">
+    <div id=top class="row">
+
+        <div class="navbar navbar-dark bg-dark">
+            <img class="navbar-logo" id="logo" src="/logo.png">
+            <span class="navbar-brand">IoT/SCADA</span>
+            <button class="navbar-toggler" id="toggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <div id="cad" class="row">
+            <div id="ws" class="col-10">
+                WASM runs here
+            </div>
+            <div id="buttons" class="col-2 btn-toolbar btn-group">
+                <button id="btn_select" class="btn btn-outline-info">select</button>
+                <button id="btn_point"  class="btn btn-outline-light">point</button>
+                <button id="btn_line"   class="btn btn-outline-light">line</button>
+                <button id="btn_del"    class="btn btn-outline-warning">del</button>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer flex-column">
+        <div class="accordion">
+            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#httpreq" aria-expanded="false"  aria-controls="httpreq">HTTP request</button>
+            <pre id="httpreq" class="accordion-collapse collapse">

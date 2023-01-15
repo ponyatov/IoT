@@ -1,0 +1,6 @@
+code meld doxygen clang-format
+build-essential
+sqlitebrowser
+wabt
+libfontconfig1-dev
+apache2-utils

@@ -1,0 +1,11 @@
+*~
+*.swp
+*.log
+
+/docs/
+
+target/
+
+.ipynb*
+
+!.gitignore

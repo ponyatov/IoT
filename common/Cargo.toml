@@ -1,0 +1,9 @@
+[package]
+name        = "common"
+version     = "0.0.1"
+edition     = "2021"
+
+authors     = ["Dmitry Ponyatov <dponyatov@gmail.com>"]
+description = "common code for all IoT components"
+
+[dependencies]

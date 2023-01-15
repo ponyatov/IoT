@@ -1,0 +1,14 @@
+[build]
+target = "thumbv6m-none-eabi"
+
+[target.thumbv6m-none-eabi]
+# linker = "arm-linux-gnueabihf-gcc"
+# rustflags = []
+runner    = ["qemu-system-arm", "-M", "lm3s6965evb"]
+# runner    = ['arm-none-eabi-gdb']
+rustflags = [
+    "-C", "target-cpu=cortex-m0",
+#   "-C", "link-arg=-Tlink.x",
+#   "-C", "linker=arm-none-eabi-ld",
+#   "-Z", "linker-flavor=ld",
+]

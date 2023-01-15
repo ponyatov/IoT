@@ -1,0 +1,9 @@
+[package]
+name    = "wasm"
+version = "0.0.1"
+edition = "2021"
+
+authors     = ["Dmitry Ponyatov <dponyatov@gmail.com>"]
+description = "shared WASM parts"
+
+[dependencies]

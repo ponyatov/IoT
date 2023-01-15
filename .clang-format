@@ -1,0 +1,13 @@
+# https://hackmd.io/@exradr/clang-format
+# options : https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+BasedOnStyle: Google
+IndentWidth:  4
+TabWidth:     4
+UseTab:       Never
+ColumnLimit:  80
+UseCRLF:      false
+
+AllowShortBlocksOnASingleLine:    Always
+AllowShortFunctionsOnASingleLine: All
+AllowAllArgumentsOnNextLine:      false

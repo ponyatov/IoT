@@ -1,0 +1,12 @@
+[package]
+name        = "cortex"
+version     = "0.0.1"
+edition     = "2021"
+
+authors     = ["Dmitry Ponyatov <dponyatov@gmail.com>"]
+description = "Cortex-M firmware components for embedded devices"
+
+[dependencies]
+common = { path = "../common" }
+config = { path = "../config" }
+vm     = { path = "../vm"     }

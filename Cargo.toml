@@ -1,0 +1,33 @@
+[package]
+name        = "iot"
+version     = "0.0.1"
+edition     = "2021"
+
+description =  "IoT infrastructure"
+authors     = ["Dmitry Ponyatov <dponyatov@gmail.com>"]
+license     =  "MIT"
+
+[workspace]
+members = [
+    "common", "config", "vm", "wam", "eco",
+    "server", "wasm",
+    "cortex",
+    "droid",
+    "cad",
+    "nocore",
+    ]
+
+[dependencies]
+# common = { path = "../common" }
+# config = { path = "../config" }
+# vm     = { path = "../vm"     }
+# cad    = { path = "../cad"    }
+# wam    = { path = "../wam"    }
+
+[target.'cfg(unix)'.dependencies]
+
+[target.'cfg(windows)'.dependencies]
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+
+[target.'cfg(target_os = "android")'.dependencies]

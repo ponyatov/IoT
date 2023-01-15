@@ -1,0 +1,25 @@
+[package]
+name        = "cad"
+version     = "0.0.1"
+edition     = "2021"
+
+description =  "WebCAD geometry engine"
+authors     = ["Dmitry Ponyatov <dponyatov@gmail.com>"]
+
+repository  = "https://github.com/ponyatov/IoT"
+license     =  "MIT"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+wasm-bindgen = "*"
+wee_alloc = "*"
+
+[target.'cfg(unix)'.dependencies]
+# winit = { version = "0.27.5", features = ["x11"] }
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = false
